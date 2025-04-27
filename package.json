@@ -1,7 +1,7 @@
 {
   "name": "elff",
-  "displayName": "elff",
-  "description": "Emacs-like find file functionality for VS Code",
+  "displayName": "elff - Emacs-like find file",
+  "description": "Emacs-like find file/recent files functionality for VS Code",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.99.0"
@@ -14,8 +14,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "elff.helloWorld",
-        "title": "Hello World"
+        "command": "elff.findFile",
+        "title": "Elff: Find File"
+      },
+      {
+        "command": "elff.recentFiles",
+        "title": "Elff: Recent Files"
       }
     ]
   },
