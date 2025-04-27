@@ -23,7 +23,7 @@ _Find file_ uses the currently open workspace (or ~ if there is no workspace) as
 
 ### Recent Files
 
-_Recent Files_ keeps a list of recently opened files for quick access. Their full path is displayed and can be searched. Files are opened in the current window and do not touch the currently open workspace.
+_Recent Files_ keeps a list of recently opened files for quick access. Their full path is displayed and can be searched. Files are opened in the current window and do not touch the currently open workspace. By default, Elff will keep track of 50 files.
 
 By running "Elff: Clear Recent Files" the list of recent files can be cleared. Note that deleted files are removed automatically and do not require this command.
 
@@ -52,5 +52,5 @@ The two main commands have the following keybindings by default:
 The number of recent files to track at one time can be configured as follows:
 
 ```json
-"elff.TODO": 50
+"elff.recentFiles.maxCount": 50
 ```
