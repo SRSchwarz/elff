@@ -1,8 +1,11 @@
 {
   "name": "elff",
-  "displayName": "elff - Emacs-like find file",
+  "displayName": "Elff - Emacs-like find file",
   "description": "Emacs-like find file/recent files functionality for VS Code",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/SRSchwarz/elff"},
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -20,6 +23,10 @@
       {
         "command": "elff.recentFiles",
         "title": "Elff: Recent Files"
+      },
+      {
+        "command": "elff.clearRecentFiles",
+        "title": "Elff: Clear Recent Files"
       }
     ]
   },
