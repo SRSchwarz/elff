@@ -1,0 +1,82 @@
+{
+  "name": "elff",
+  "displayName": "Elff - Emacs-like find file",
+  "description": "Emacs-like find file/recent files functionality for VS Code",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/SRSchwarz/elff"},
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "elff.findFile",
+        "title": "Elff: Find File"
+      },
+      {
+        "command": "elff.recentFiles",
+        "title": "Elff: Recent Files"
+      },
+      {
+        "command": "elff.clearRecentFiles",
+        "title": "Elff: Clear Recent Files"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "elff.findFile",
+        "key": "ctrl+shift+e",
+        "when": "!terminalFocus",
+        "mac": "cmd+shift+e",
+        "linux": "ctrl+shift+e",
+        "win": "ctrl+shift+e"
+      },
+      {
+        "command": "elff.recentFiles",
+        "key": "ctrl+shift+r",
+        "when": "!terminalFocus",
+        "mac": "cmd+shift+r",
+        "linux": "ctrl+shift+r",
+        "win": "ctrl+shift+r"
+      }
+    ],
+    "configuration": {
+      "title": "Elff",
+      "properties": {
+        "elff.recentFiles.maxCount": {
+          "type": "number",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "Maximum number of recent files to track"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
