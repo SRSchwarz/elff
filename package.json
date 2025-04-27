@@ -2,7 +2,7 @@
   "name": "elff",
   "displayName": "Elff - Emacs-like find file",
   "description": "Emacs-like find file/recent files functionality for VS Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "repository": {"type": "git", "url": "https://github.com/SRSchwarz/elff"},
   "icon": "images/icon.png",
